@@ -1,0 +1,16 @@
+Flask
+Flask-Cache
+Flask-Script
+Flask-Login
+Flask-Moment
+Flask-SQLAlchemy
+Jinja2
+SQLAlchemy
+WTForms
+Werkzeug
+colander
+gunicorn
+nose
+requests
+rq
+supervisor
