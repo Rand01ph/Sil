@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %} | Login{% endblock %}
+
+{% block content %}
+<div class="post">
+    <h1 id="title">Login</h1>
+    <article>
+        <form action="{{ url_for('admin.login') }}" method="post" id="login">
+            <div class="input">
+                {{ form.username.label }} {{ form.username(id='username') }}
+            </div>
+            <div class="input">
+                {{ form.password.label }} {{ form.password(id='password') }}
+            </div>
+            <div id="submit">
+                {{ form.remember_me() }}
+                {{ form.submit() }}
+            </div>
+        </form>
+    </article>
+</div>
+{% endblock %}
