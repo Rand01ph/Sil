@@ -9,6 +9,9 @@ from ..models import Admin
 from .forms import LoginForm
 
 
+'''登陆'''
+
+
 @admin.route('/login', methods=['GET', 'POST'])
 def login():
 	form = LoginForm()
@@ -21,9 +24,23 @@ def login():
 	return render_template('admin/login.html', form=form)
 
 
+'''登出'''
+
+
 @admin.route('/logout')
 @login_required
 def logout():
 	logout_user()
 	flash('You have been logged out.')
 	return redirect(url_for('main.index'))
+
+
+'''写博客'''
+
+'''编辑博客'''
+
+'''删除博客'''
+
+'''添加Tag'''
+
+'''编辑Tag'''
